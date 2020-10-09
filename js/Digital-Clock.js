@@ -1,5 +1,7 @@
 "use strict";
 
+
+
 //walk through project on creating a digital clock.
 
 function displayTime(){
