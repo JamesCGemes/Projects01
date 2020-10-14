@@ -13,6 +13,7 @@
         font-size: 80px;
         font-family: Impact;
         letter-spacing: 10px;
+        /*width: min(500px, 70%);*/
 
     }
 
