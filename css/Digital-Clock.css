@@ -3,13 +3,14 @@
     }
 
     .clock {
+
         opacity: 0.7;
         position: absolute;
         top: 50%;
         left: 33%;
         transform: translateX(-50);
         translateY(-50);
-        color: #000000;
+        color: #C1C1C1;
         font-size: 80px;
         font-family: Impact;
         letter-spacing: 10px;
