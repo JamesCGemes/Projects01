@@ -65,4 +65,21 @@ function isEmpty(s) {
 		return false;
 	}
 
-}
+// Make a function using the && operator.
+
+    function and(a, b) {
+        if (a == true && b == true) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+	//The challenge is to try and fix this buggy code, given the inputs true and false. See the examples below for the expected output.
+    function has_bugs(buggy_code) {
+        if (buggy_code == true) {
+            return "sad days";
+        } else{
+            return "it's a good day";
+        }
+    }
