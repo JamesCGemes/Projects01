@@ -83,3 +83,48 @@ function isEmpty(s) {
             return "it's a good day";
         }
     }
+
+	//Create a function that takes the number of wins, draws and losses and calculates the number of points a football team has obtained so far.
+//
+// wins get 3 points
+// draws get 1 point
+// losses get 0 points
+
+    function footballPoints(wins, draws, losses) {
+        var winPoints = wins * 3;
+        var drawPoints = draws * 1;
+        var lossPoints = 0;
+        return winPoints + drawPoints + lossPoints;
+    }
+
+	//Write a template string according to the following example:
+
+//const name = John;
+//`hello, my name is ${name}.` ➞ "hello, my name is John."
+
+
+// modify the template variable to be a template string
+    function format(a, b, c) {
+// the result string must give: "Their names were: a, b and c."
+        return `Their names were: ${a}, ${b} and ${c}.`
+    }
+
+	//Create a function that takes an equation (e.g. "1+1"), and returns the answer.
+    function equation(s) {
+        return eval(s);
+    }
+
+	//Given two integers, a and b, return true if a can be divided evenly by b. Return false otherwise.
+    function dividesEvenly(a, b) {
+        if(a % b ==0){
+            return true;
+        }else{
+            return false;
+        }
+    }
+
+	//Given two arguments, return an array which contains these two arguments.
+    function makePair(num1, num2) {
+        var arr=[num1, num2];
+        return arr;
+    }
