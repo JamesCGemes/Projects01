@@ -40,7 +40,45 @@ nav .nav-item {
     border: solid white;
     background-color: #D76243;
 }
+.orangeCircle{
+    width: 105px;
+    height: 105px;
+    border: solid white;
+    background-color: #E89E19;
+}
+.greenCircle{
+    width: 105px;
+    height: 105px;
+    border: solid white;
+    background-color: #7DB16D;
+}
+.blueCircle{
+    width: 105px;
+    height: 105px;
+    border: solid white;
+    background-color: #01ABAB;
+}
+.smallRedCircle{
+    width: 18px;
+    height: 18px;
+    background-color: #D76243;
+}
+.smallOrangeCircle{
+    width: 18px;
+    height: 18px;
+    background-color: #E89E19;
+}
+.smallGreenCircle{
+    width: 18px;
+    height: 18px;
+    background-color: #7DB16D;
+}
+.smallBlueCircle{
+    width: 18px;
+    height: 18px;
+    background-color: #D76243;
 
+}
 
 
 
