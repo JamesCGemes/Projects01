@@ -1,0 +1,17 @@
+body{
+    background: #1c3144;
+    padding-top: 25vh;
+}
+
+form{
+    background: #f6ae2d;
+}
+
+.form-container{
+    border-radius: 30px;
+    padding: 30px;
+}
+
+.btn{
+    background: #5e7ce2;
+}
