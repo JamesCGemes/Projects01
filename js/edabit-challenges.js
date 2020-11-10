@@ -146,4 +146,30 @@ function isEmpty(s) {
         return sum;
     }
 
+//Create a function that takes an object as an argument and returns a string with facts about the city. The city facts will need to be extracted from the object's three properties:
 
+//name
+//population
+//continent
+
+
+
+    function cityFacts(city) {
+        var cityName = city.name;
+        var cityPop = city.population;
+        var cityPlace = city.continent;
+        return cityName + " has a population of " + cityPop + " and is situated in " + cityPlace;
+    }
+
+
+//In this challenge, a farmer is asking you to tell him how many legs can be counted among all his animals. The farmer breeds three species:
+
+//chickens = 2 legs
+//cows = 4 legs
+//pigs = 4 legs
+//The farmer has counted his animals and he gives you a subtotal for each species. You have to implement a function that returns the total number of legs of all the animals.
+
+    function animals(chickens, cows, pigs) {
+        let totalLegs = (chickens * 2) + (cows * 4) + (pigs * 4);
+        return totalLegs;
+    }
