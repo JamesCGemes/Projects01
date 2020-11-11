@@ -1,30 +1,43 @@
-const charAmountRange = document.getElementById('charAmountRange')
-const charAmountNum = document.getElementById('charAmountNum')
-const form = document.getElementById('passwordGenerator')
-const includeUppercase = document.getElementById('includeUppercase')
-const includeNumbersElement = document.getElementById('includeNumbersElement')
-const includeSymbolsElement = document.getElementById('includeSymbolsElement')
+const characterAmountRange = document.getElementById('characterAmountRange')
+const characterAmountNumber = document.getElementById('characterAmountNumber')
+const form = document.getElementById('passwordGeneratorForm')
+const includeUppercaseElement = document.getElementById('includeUppercase')
+const includeNumbersElement = document.getElementById('includeNumbers')
+const includeSymbolsElement = document.getElementById('includeSymbols')
+const passwordDisplay = document.getElementById('passwordDisplay')
+
+//Characters for the password, uses character codes
 const lowerCaseCharCodes = lowToHigh(97, 122)
 const upperCaseCharCodes = lowToHigh(65, 90)
 const numberCharCodes = lowToHigh(48, 57)
 const symbolsCharCodes = lowToHigh(33, 47).concat(lowToHigh(58, 64)).concat(lowToHigh(91, 96)).concat(lowToHigh(123, 126))
 
 
-charAmountNum.addEventListener('input', syncCharAmount)
-charAmountRange.addEventListener('input', syncCharAmount)
+characterAmountNumber.addEventListener('input', syncCharacterAmount)
+characterAmountRange.addEventListener('input', syncCharacterAmount)
 
 form.addEventListener('submit', e =>{
     e.preventDefault()
-    const charAmount = charAmountNum.value
-    const includeUppercaseForm = includeUppercase.checked
+    const characterAmount = characterAmountNumber.value
+    const includeUppercase = includeUppercaseElement.checked
     const includeNumbers = includeNumbersElement.checked
     const includeSymbols = includeSymbolsElement.checked
-    const password = generatePassword(charAmount, includeUppercaseForm, includeNumbers, includeSymbols)
+    const password = generatePassword(characterAmount, includeUppercase, includeNumbers, includeSymbols)
+    passwordDisplay.innerText = password
 })
 
-function generatepassword(charAmount, includeUppercaseForm, includeNumbers, includeSymbols){
+function generatepassword(characterAmount, includeUppercase, includeNumbers, includeSymbols){
     let charCodes = lowerCaseCharCodes
-    // if (includeUppercaseForm) charCodes = charCodes.concat(upperCaseCharCodes) pickup here
+    if (includeUppercase) charCodes = charCodes.concat(upperCaseCharCodes)
+    if (includeSymbols) charCodes = charCodes.concat(symbolsCharCodes)
+    if(includeNumbers) charCodes = charCodes.concat(numberCharCodes)
+
+    const passwordCharacters = []
+    for (let i = 0; i < characterAmount; i++){
+       const characterCode = charCodes[Math.floor(Math.random() * charCodes.length)]
+        passwordCharacters.push(String.fromCharCode(characterCode))
+    }
+    return passwordCharacters.join('')
 }
 
 function lowToHigh(low, high){
@@ -35,11 +48,11 @@ function lowToHigh(low, high){
     return array;
 }
 
-
-function syncCharAmount(e){
+//This syncs the slider bar and number input together so that they both change together.
+function syncCharacterAmount(e){
     const value = e.target.value
-    charAmountNum.value = value
-    charAmountRange.value = value
+    characterAmountNumber.value = value
+    characterAmountRange.value = value
 
 }
 
