@@ -1,9 +1,11 @@
+//
 const characterAmountRange = document.getElementById('characterAmountRange')
 const characterAmountNumber = document.getElementById('characterAmountNumber')
-const form = document.getElementById('passwordGeneratorForm')
+
 const includeUppercaseElement = document.getElementById('includeUppercase')
 const includeNumbersElement = document.getElementById('includeNumbers')
 const includeSymbolsElement = document.getElementById('includeSymbols')
+const form = document.getElementById('passwordGeneratorForm')
 const passwordDisplay = document.getElementById('passwordDisplay')
 
 //Characters for the password, uses character codes
@@ -12,7 +14,7 @@ const upperCaseCharCodes = lowToHigh(65, 90)
 const numberCharCodes = lowToHigh(48, 57)
 const symbolsCharCodes = lowToHigh(33, 47).concat(lowToHigh(58, 64)).concat(lowToHigh(91, 96)).concat(lowToHigh(123, 126))
 
-
+//Event listeners for the number of letters inputs, slider and number box.
 characterAmountNumber.addEventListener('input', syncCharacterAmount)
 characterAmountRange.addEventListener('input', syncCharacterAmount)
 
@@ -22,7 +24,7 @@ form.addEventListener('submit', e =>{
     const includeUppercase = includeUppercaseElement.checked
     const includeNumbers = includeNumbersElement.checked
     const includeSymbols = includeSymbolsElement.checked
-    const password = generatePassword(characterAmount, includeUppercase, includeNumbers, includeSymbols)
+    const password = generatepassword(characterAmount, includeUppercase, includeNumbers, includeSymbols)
     passwordDisplay.innerText = password
 })
 
