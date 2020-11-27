@@ -5,12 +5,13 @@
     const getMovies = fetch(`${moviesUrl}`)
 
 
-    function moviesRequest (){
+    function moviesRequest () {
         getMovies
-            .then(rep => rep.json())
+            .then(res => res.json())
             .then(data => console.log(data))
+        .then(data => {
+            let html = ''
+        })
     }
 
-    moviesRequest();
-
-
+    console.log(moviesRequest());
