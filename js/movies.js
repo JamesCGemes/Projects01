@@ -10,7 +10,7 @@
             // Show image container
             $("#loadingMessage").show();
         });
-        $(document).ajaxComplete(function(){
+        $(document).ajaxComplete(function(event, request){
             // Hide image container
             $("#loadingMessage").hide();
         });
@@ -19,6 +19,7 @@
 
     function moviesRequest () {
         getMovies
+            pageLoading()
             .then(res => res.json())
             // .then(data => console.log(typeof data))
         .then(movies => {
