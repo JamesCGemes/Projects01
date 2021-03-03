@@ -8,29 +8,96 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <!-- Compiled and minified CSS -->
+    <script src="https://kit.fontawesome.com/5779c08c81.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.css">
-    <!-- Compiled and minified JavaScript -->
-
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source-code-Pro">
+
+    <style>
+        @media screen and (max-width: 670px){
+            header{
+                min-height: 500px;
+            }
+        }
+        .section{
+            padding-top: 4vw;
+            padding-bottom: 4vw;
+        }
+        body{
+            background-color: #D0E4E0;
+        }
+    </style>
+
 </head>
 <body>
+    <nav>
+        <div class="nav-wrapper teal darken-4">
+            <div class="container">
+            <a href="#" class="brand-logo">JamesCGemes</a>
+            <a href="#" class="sidenav-trigger" data-target="mobile-links">
+                <i class="material-icons">menu</i>
+            </a>
+            <ul id="nav-mobile" class="right hide-on-med-and-down">
+<!--                <li><a href="https://github.com/JamesCGemes">Github</a></li>-->
+                <li><a href="https://github.com/JamesCGemes"  ><i class="fab fa-github"></i></a></li>
+                <li><a href="https://www.linkedin.com/in/james-gemes/"><i class="fab fa-linkedin"></i></a></li>
+            </ul>
+            </div>
+        </div>
+    </nav>
 
-<div class="container">
-    <h5 class="center-align">Center alignment</h5>
-    <h5 class="left-align">Left alignment</h5>
-    <h5 class="right-align">Right alignment</h5>
-</div>
+    <ul class="sidenav" id="mobile-links">
+        <li><a href="https://github.com/JamesCGemes">Github</a></li>
+        <li><a href="https://www.linkedin.com/in/james-gemes/">LinkedIn</a></li>
+    </ul>
 
-<div class="container grey lighten-2 box valign-wrapper">
-    <h5>Vertical alignment</h5>
-</div>
+    <section class="container section" id="bio">
+        <div class="row">
+            <div class="col s12 l4">
+                <img src="img/codeup_10-20-0279.jpg" class="responsive-img materialboxed">
+            </div>
+            <div class="col s12 l6 offset-l1">
+                <h3>About me</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam aut, earum eius eligendi et expedita hic illo, in mollitia nobis odit pariatur, perferendis quaerat quisquam reiciendis repudiandae ut. Magni, recusandae.</p>
 
-<div class="container">
-    <p class="truncate">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut nec sem dictum, consectetur ex vitae, feugiat quam. Sed quis sodales urna. Donec tincidunt faucibus diam a ullamcorper.</p>
-</div>
+            </div>
+        </div>
+    </section>
 
-<!-- Compiled and minified JavaScript -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.js"></script>
+    <div class="parallax-container">
+        <div class="parallax">
+            <img src="img/pexels-steve-johnson-3600814.jpg" alt="" class="responsive-img">
+        </div>
+    </div>
+
+    <section class="container section" id="blog-site">
+        <div class="row">
+            <div class="col s12 l4">
+                <img src="img/Screen%20Shot%202021-03-03%20at%203.25.47%20PM.png" class="responsive-img materialboxed">
+            </div>
+            <div class="col s12 l6 offset-l1">
+                <h3>Blog Project</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam aut, earum eius eligendi et expedita hic illo, in mollitia nobis odit pariatur, perferendis quaerat quisquam reiciendis repudiandae ut. Magni, recusandae.</p>
+
+            </div>
+        </div>
+    </section>
+
+    <div class="parallax-container">
+        <div class="parallax">
+            <img src="img/pexels-steve-johnson-2130474.jpg" alt="" class="responsive-img">
+        </div>
+    </div>
+
+
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script>
+        $(document).ready(function (){
+           $('.sidenav').sidenav();
+           $('.materialboxed').materialbox();
+           $('.parallax').parallax();
+        });
+    </script>
 </body>
 </html>
