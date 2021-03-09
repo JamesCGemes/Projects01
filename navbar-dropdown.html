@@ -25,7 +25,7 @@
             padding-bottom: 4vw;
         }
         header{
-            background-image: url("img/faded-pills.jpg");
+            background-image: url("img/pexels-pixabay-159211 (1).jpg");
             background-size: cover;
             background-position: center;
             min-height: 300px;
@@ -35,47 +35,35 @@
         }
 
     </style>
-
-
-</head>
 <body>
-<header>
+
+<!-- Dropdown Structure -->
+<ul id="dropdown1" class="dropdown-content">
+    <li><a href="#!">one</a></li>
+    <li><a href="#!">two</a></li>
+    <li class="divider"></li>
+    <li><a href="#!">three</a></li>
+</ul>
     <nav>
-        <div class="nav-wrapper grey lighten-5">
-            <div class="container">
-                <a href="#" class="brand-logo"><span class="orange-text">Pharm</span><span class="blue-text">Hands</span></a>
-                <a href="#" class="sidenav-trigger" data-target="mobile-links">
-                    <i class="material-icons icon-black">menu</i>
-                </a>
-                <ul id="nav-mobile" class="right hide-on-med-and-down">
-                    <li><a href="#"  class="black-text">Login</a></li>
-                    <li><a href="#" class="black-text">Sign-up</a></li>
-                </ul>
-            </div>
-        </div>
-    </nav>
+    <div class="nav-wrapper">
+        <a href="#" class="brand-logo">Logo</a>
+        <ul class="right hide-on-med-and-down">
+            <li><a href="#">Sass</a></li>
+            <li><a href="#">Components</a></li>
+            <!-- Dropdown Trigger -->
+            <li><a class="dropdown-trigger" href="#!" data-target="dropdown1">Dropdown<i class="material-icons right">arrow_drop_down</i></a></li>
+        </ul>
+    </div>
+</nav>
 
-    <ul class="sidenav blue " id="mobile-links">
-        <li><a href="#">Login</a></li>
-        <li><a href="#">Sign-up</a></li>
-    </ul>
-
-</header>
-
-
-
-
-
-
-
-
-
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 <script>
+
     $(document).ready(function (){
-        $('.sidenav').sidenav();
+        $(".dropdown-trigger").dropdown();
     });
 </script>
+
 </body>
 </html>
