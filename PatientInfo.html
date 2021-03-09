@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/5779c08c81.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source-code-Pro">
+
+    <style>
+        @media screen and (max-width: 670px){
+            header{
+                min-height: 500px;
+            }
+        }
+        .section{
+            padding-top: 4vw;
+            padding-bottom: 4vw;
+        }
+        body{
+            background-color: #D0E4E0;
+        }
+
+    </style>
+
+</head>
+<body>
+    <html>
+    <div class="row">
+        <div class="col s12">
+            <ul class="tabs">
+                <li class="tab col s3 orange accent-4"><a href="#test1" class="white-text">Paitent Information</a></li>
+
+            </ul>
+        </div>
+
+        <div class="row">
+            <form class="col s12">
+                <div class="row">
+                    <div class="input-field col s6">
+                        <input placeholder="" id="first_name" type="text" class="validate">
+                        <label for="first_name">First Name</label>
+                    </div>
+                    <div class="input-field col s6">
+                        <input id="last_name" type="text" class="validate">
+                        <label for="last_name">Last Name</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input  id="DOB" type="text" class="datepicker">
+                        <label for="DOB">DOB</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input id="Sex" type="text" class="validate">
+                        <label for="Sex">Sex</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input id="phoneNumber" type="text" class="validate">
+                        <label for="phoneNumber">Phone Number</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input id="Address" type="text" class="validate">
+                        <label for="Address">Address</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input id="City" type="text" class="validate">
+                        <label for="City">City</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input id="state" type="text" class="validate">
+                        <label for="state">State</label>
+                    </div>
+                </div>
+
+            </form>
+        </div>
+    </div>
+
+
+    </html>
+
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+<script>
+    $(document).ready(function(){
+        $('.tabs').tabs();
+        $('.datepicker').datepicker();
+    });
+</script>
+</body>
