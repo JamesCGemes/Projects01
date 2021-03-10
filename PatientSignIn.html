@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Pharm Hands</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.css">
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source-code-Pro">
+
+
+    <style>
+        @media screen and (max-width: 670px){
+            header{
+                min-height: 150px;
+            }
+        }
+        .section{
+            padding-top: 4vw;
+            padding-bottom: 4vw;
+        }
+        body{
+            background-color: #1565c0 ;
+        }
+
+    </style>
+
+
+</head>
+
+<body>
+<div class="valign-wrapper row login-box">
+    <div class="col card hoverable s10 pull-s1 m6 pull-m3 l4 pull-l4">
+        <form>
+            <div class="card-content">
+                <span class="card-title">Sign In</span>
+                <div class="row">
+                    <div class="input-field col s12">
+                        <label for="email">Email address</label>
+                        <input type="email" class="validate" name="email" id="email" />
+                    </div>
+                    <div class="input-field col s12">
+                        <label for="password">Password </label>
+                        <input type="password" class="validate" name="password" id="password" />
+                    </div>
+                </div>
+            </div>
+            <div class="card-action right-align">
+                <input type="reset" id="reset" class="btn-flat grey-text waves-effect">
+                <input type="submit" class="btn orange  waves-effect waves-light" value="Login">
+            </div>
+        </form>
+    </div>
+</div>
+
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+<script>
+    $(document).ready(function (){
+        $('.sidenav').sidenav();
+    });
+    $("#reset").on("click", function() {
+        $('label').removeClass('active');
+    });
+</script>
+</body>
+</html>
