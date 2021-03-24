@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html id="background-image" lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport"
@@ -32,23 +32,49 @@
         .section{
             padding-top: 4vw;
             padding-bottom: 4vw;
+
         }
 
         .icon-black{
             color: black;
         }
-        body{
-            background-color: #004181 ;
+
+        .bg-image {
+            background: url(img/pexels-alexandros-chatzidimos-3652750.jpg) no-repeat center center fixed;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+            backdrop-filter: blur(10px);
+
+        }
+        body {
+            display: flex;
+            min-height: 100vh;
+            flex-direction: column;
         }
 
+        main {
+            flex: 1 0 auto;
+        }
+
+        nav{
+            background-color: transparent;
+        }
+
+        .square{
+            border-radius: 25px;
+            background-color:rgba(192,192,192,0.3);
+            backdrop-filter: saturate(20);
+        }
     </style>
 
 
 </head>
-<body>
-<header>
+<body class="bg-image">
+
     <nav>
-        <div class="nav-wrapper grey darken-1">
+        <div class="nav-wrapper ">
             <div class="container">
                 <a href="#" class="brand- logo left-align"></a> <img src="img/Pharm-Hands-clear.png" width="150" height="60">
                 <a href="#" class="sidenav-trigger" data-target="mobile-links">
@@ -67,7 +93,83 @@
         <li><a href="#">Sign-up</a></li>
     </ul>
 
-</header>
+    <div class=" blur section no-pad-bot" id="index-banner">
+        <div class="container">
+            <h1 class="header center orange-text">Welcome to Pharm Hands!</h1>
+            <div class="row center">
+                <h5 class="header col s12 orange-text">An all-in-one pharmacy database manager for doctors, pharmacists and patients.</h5>
+            </div>
+            <div class="row center">
+                <a th:href="@{/register}" id="download-button" class="btn-large waves-effect waves-light orange">Register Now</a>
+            </div>
+            <br><br>
+
+        </div>
+    </div>
+
+
+    <div class="container">
+        <div class="section">
+
+            <!--   Icon Section   -->
+            <div class="row">
+                <div class="square col s12 m4">
+                    <div class="icon-block">
+                        <h2 class="center orange-text"><i class="material-icons">flash_on</i></h2>
+                        <h5 class="center white-text">Doctors</h5>
+
+                        <p class="white-text">Write prescriptions for your patients with little to no effort. Keep track of all records within your profile dashboard.</p>
+                    </div>
+                </div>
+
+                <div class="square col s12 m4">
+                    <div class="icon-block">
+                        <h2 class="center orange-text"><i class="material-icons">group</i></h2>
+                        <h5 class="center white-text">Pharmacists</h5>
+
+                        <p class="white-text">Simple Verification and prescription fill requests from all doctors and patients.</p>
+                    </div>
+                </div>
+
+                <div class="square col s12 m4">
+                    <div class="icon-block">
+                        <h2 class="center orange-text"><i class="material-icons">settings</i></h2>
+                        <h5 class="center white-text">Patients</h5>
+
+                        <p class="white-text">Easily track and request refills for all your prescriptions in your patient dashboard.</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <br><br>
+    </div>
+
+    <footer class="page-footer orange">
+        <div class="container">
+            <div class="row">
+                <div class="col l6 s12">
+                    <h5 class="white-text">Company Bio</h5>
+                    <p class="grey-text text-lighten-4">We are a team of college students working on this project like it's our full time job. Any amount would help support and continue development on this project and is greatly appreciated.</p>
+
+
+                </div>
+
+                <div class="col l3 s12">
+                    <h5 class="white-text">Pharm Hands On Deck:</h5>
+                    <ul>
+                        <li><a class="white-text" href="#!">Link 1</a></li>
+                        <li><a class="white-text" href="#!">Link 2</a></li>
+                        <li><a class="white-text" href="#!">Link 3</a></li>
+                        <li><a class="white-text" href="#!">Link 4</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+
 
 
 
