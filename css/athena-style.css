@@ -7,15 +7,20 @@ nav{
     right: 0;
 }
 
-
-
+.brand-logo{
+    margin-left: 10px;
+}
 nav ul a,
-nav .brand-logo {
+.brand-logo {
     color: #444;
 }
 
 p {
     line-height: 2rem;
+    font-size: 1.1em;
+}
+li{
+    font-size: 1.1em;
 }
 
 .sidenav-trigger {
